@@ -6,8 +6,19 @@ const port = 3000;
 
 
 
-console.log('study with me !');
+
 
 routerApi(app);
+
+app.listen(port, () => {
+  console.log('port:' + port);
+
+});
+
+
+app.get('/', (req, res) => {
+  res.send('Hi, this is study flaschcards');
+
+});
 
 app.use(express.json);
