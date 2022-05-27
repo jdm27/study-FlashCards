@@ -1,7 +1,6 @@
 const { models } = require('../libs/sequelize');
 
-
-class CardsService {
+class UsersService {
   constructor() { }
 
   async create(data) {
@@ -15,11 +14,10 @@ class CardsService {
   }
 
   async find() {
-    const rta = await models.Card.findAll();
+    const rta = await models.User.findAll();
     return rta;
   }
 
 }
 
-
-module.exports = CardsService;
+module.exports = UsersService;

@@ -1,11 +1,14 @@
 const express = require('express');
 const cards = require('./cards.router');
+const users = require('./users.router');
 
 
 function routerApi(app) {
   const router = express.Router();
   app.use('/api', router);
   router.use('/cards', cards);
+  router.use('/users', users);
+
 }
 
 
